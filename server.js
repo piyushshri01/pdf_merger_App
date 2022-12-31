@@ -5,11 +5,10 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 const {mergePdfs} = require("./merge")
 const app = express()
-// app.use('/static', express.static('public'))
+app.use('/static', express.static('public'))
 
 app.get('/', (req, res) => {
-  // res.sendFile(path.join(__dirname, "templates/index.html"))
-  res.json({message:"hello"})
+  res.sendFile(path.join(__dirname, "templates/index.html"))
 })
 
 app.post('/merge', upload.array('pdfs', 2), async (req, res, next)=> {
