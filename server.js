@@ -1,4 +1,4 @@
-const express = require('express')
+import express from "express"
 import * as dotenv from 'dotenv'
 const path = require('path')
 const multer  = require('multer')
