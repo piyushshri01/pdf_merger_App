@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv'
 import path from "path"
 import multer from "multer"
 const upload = multer({ dest: 'uploads/' })
-import {mergePdfs} from "./merge"
+import {mergePdfs} from "./merge.js"
 const app = express()
 app.use('/static', express.static('public'))
 
