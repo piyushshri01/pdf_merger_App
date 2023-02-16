@@ -1,9 +1,9 @@
 import express from "express"
 import * as dotenv from 'dotenv'
-const path = require('path')
-const multer  = require('multer')
+import path from "path"
+import multer from "multer"
 const upload = multer({ dest: 'uploads/' })
-const {mergePdfs} = require("./merge")
+import {mergePdfs} from "./merge"
 const app = express()
 app.use('/static', express.static('public'))
 
